@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="proj.css">
+        <script src="script.js"></script>
+        <style>
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+            }
+            
+            li {
+                float: left;
+            }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            li a:hover {
+                background-color: #111;
+            }
+
+            .active {
+                background-color: #0e6cc3;
+            }
+
+            ul {
+                position: fixed;
+                top: 0;
+                width: 100%;
+            }
+
+            body {
+                background-image: url('background.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            div.gallery {
+                margin: 5px;
+                border: 1px solid #ccc;
+                float: left;
+                width: 400px;
+            }
+
+            div.gallery:hover {
+                border: 1px solid #777;
+            }
+
+            div.gallery img {
+                width: 400;
+                height: 300;
+            }
+
+            div.desc {
+                padding: 15px;
+                text-align: center;
+            }
+        </style>
+         <title>Learning Tips - Gallery</title>
+    </head>
+    
+    <body>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a class="active" href="gallery.html">Gallery</a></li>
+            <li><a href="game.html">Game</a></li>
+            <li><a href="info.html">Info</a></li>
+          </ul>
+
+          <header>
+            <hr><hr><hr>
+            <h1 id="id1">Focus, focus, focus!</h1>
+
+            <!-- changes the style of the element using JS-->
+            <button type="button" 
+            onclick="document.getElementById('id1').style.color = '#0e6cc3'">Click Me!</button>
+        </header>
+
+          <div class="gallery">
+            <a target="_blank" href="messy_desk.jpg">
+              <img src="messy_desk.jpg" alt="Messy Desk" width="400" height="300">
+            </a>
+            <div class="desc">What your desk SHOULDN'T look like</div>
+          </div>
+          
+          <div class="gallery">
+            <a target="_blank" href="phone_on.jpg">
+              <img src="phone_on.jpg" alt="Phone off" width="400" height="300">
+            </a>
+            <div class="desc">A phone full of distractions will lead to failure </div>
+          </div>
+          
+          <div class="gallery">
+            <a target="_blank" href="dark_room.jpg">
+              <img src="dark_room.jpg" alt="Dark room" width="400" height="300">
+            </a>
+            <div class="desc">EYE STRAIN AND HEADACHES IMMINENT!</div>
+          </div>
+          
+          <div class="gallery">
+            <a target="_blank" href="tidy_desk.jpg">
+              <img src="tidy_desk.jpg" alt="Tidy Clean" width="400" height="300">
+            </a>
+            <div class="desc">What your desk SHOULD look like. 0 mess = 100 results</div>
+          </div>
+          
+          <div class="gallery">
+            <a target="_blank" href="phone_off.jpg">
+              <img src="phone_off.webp" alt="Phone off" width="400" height="300">
+            </a>
+            <div class="desc">Out of sight, out of mind</div>
+          </div>
+
+          <div class="gallery">
+            <a target="_blank" href="bright_room.jpg">
+              <img src="bright_room.jpg" alt="Bright room" width="400" height="300">
+            </a>
+            <div class="desc">That bright mind of yours need a bright room to focus in</div>
+          </div>
+          
+
+    </body>
+</html>
