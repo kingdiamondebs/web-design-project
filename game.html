@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="proj.css">
+        <script src="script.js"></script>
+        <style>
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+            }
+            
+            li {
+                float: left;
+            }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            li a:hover {
+                background-color: #111;
+            }
+
+            .active {
+                background-color: #0e6cc3;
+            }
+
+            ul {
+                position: fixed;
+                top: 0;
+                width: 100%;
+            }
+
+            body {
+                background-image: url('background.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
+         <title>Learning Tips - Game</title>
+    </head>
+    
+    <body>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a class="active" href="game.html">Game</a></li>
+            <li><a href="info.html">Info</a></li>
+          </ul>
+
+          <html>
+            <hr><hr><hr>
+          <h1> Guessing Game</h1>
+          <p>A guessing game to play with a friend. Who will win??</p>
+        <div id="app">
+            <div>
+              <input id="player1" placeholder="Enter player 1 Name" />
+            </div>
+            <div>
+              <input id="player2" placeholder="Enter player 2 Name" />
+            </div>
+            <button id="roll">Roll Dice</button>
+            <div id="results"></div>
+          </div>
+        <script>
+            
+            const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+
+                const rollDice = () => getRandomNumber(1, 6);
+
+                document.getElementById("roll").addEventListener("click", function () {
+                /* fetch player names from the input fields */
+                const player1 = document.getElementById("player1").value;
+                const player2 = document.getElementById("player2").value;
+
+                const player1Score = rollDice();
+                const player2Score = rollDice();
+
+                /* initializes empty string to store result */
+                let result = "";
+
+                /* determines the result */
+                if (player1Score > player2Score) {
+                    result = `${player1} won the round`;
+                } else if (player2Score > player1Score) {
+                    result = `${player2} won the round`;
+                } else {
+                    result = "This round is tied";
+                }
+
+                /* shows the result on the page */
+                document.getElementById("results").innerHTML = `
+                <p>${player1} => ${player1Score}</p>
+                <p>${player2} => ${player2Score}</p>
+                <p>${result}</p>
+                `;
+});
+        </script>
+
+            <h2>Memory Tips</h2>
+            <!-- triggers a function when the user mouses over, or out of, an HTML element
+            in this case, it changes the text in the box-->
+              <div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+                  style="background-color:#0e6cc3;width:140px;height:40px;padding:60px;">Flashcards</div>
+        <script>
+            function mOver(obj) {
+                obj.innerHTML = "Flashcards provide an easy way to familiarise yourself with key concepts and pieces of information. "
+            }
+            /* returns original text when mouse is removed*/
+            function mOut(obj) {
+                obj.innerHTML = "Flashcards"
+            }
+        </script>
+
+    </body>
+</html>
