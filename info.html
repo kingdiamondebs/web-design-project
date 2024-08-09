@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="proj.css">
+        <script src="script.js"></script>
+        <style>
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+            }
+            
+            li {
+                float: left;
+            }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            li a:hover {
+                background-color: #111;
+            }
+
+            .active {
+                background-color: #0e6cc3;
+            }
+
+            ul {
+                position: fixed;
+                top: 0;
+                width: 100%;
+            }
+
+            body {
+                background-image: url('background.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            #text { /* special id for all lists exluding the nav bar*/
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 20px;
+            }
+        </style>
+         <title>Learning Tips - Info</title>
+    </head>
+    
+    <body>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="game.html">Game</a></li>
+            <li><a class ="active "href="info.html">Info</a></li>
+          </ul>
+
+          <hr><hr><hr>
+          <h1>Extra information to help your studying</h1>
+          <h2>Time Management Skills</h2>
+          <ol style="list-style-type:square;">
+            <p>
+            <li id="text">A good early to the day is vital. If you get up late you may not have time to eat and as a result not have the energy to do you best 
+                or you could forget something important like your pencil case or homework which would throw off your entire day.
+            </li> 
+            <li id="text">Going to bed early will make it easier to get up early. Sleep is invaluable. User your time profitably and turn off the video games to get 
+                a good night's sleep.
+            </li> 
+            <li id="text">Be realistic, prioritize based on how long you have to complete each task. Highest priority is something due today or tomorrow, second priority
+                 due in one week, third priority due in one month and perhaps spending longer on the high priority tasks and get them finished first.
+            </li>
+            <li id="text">Extracurricular activites are invaluable, you can learn skills, get active and make friends. But how many is too many, how do you 
+                balance extracurricular with school work? As you get older you have to learn to set priorities that will benefit you in the long run.
+           </li>
+           <li id="text">Even leisure time is valuable so don't waste it on time consuming social media/computer games/TV etc. that will give you nothing 
+            back. Learn an instrument, learn a language, meet new people, be proactive and engage with the world.
+       </li>
+            </p>
+          </ol>
+
+
+    </body>
+</html>
