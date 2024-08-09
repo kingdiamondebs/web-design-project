@@ -1,1 +1,149 @@
-<! DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="proj.css">
+        <script> 
+        function validateForm() {   /* DOM manipulation - form validation */
+            let x = document.forms["myForm"]["time"].value;
+            if (x == "") {
+                alert("Start time must be inputed");
+                return false;
+            } else {
+                alert("Good luck with you studying!");
+                return false;
+            }
+        }
+
+        </script>
+
+        <style>
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+            }
+            
+            li {
+                float: left;
+            }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            li a:hover {
+                background-color: #111;
+            }
+
+            /* Highlights the current page */
+            .active {   
+                background-color: #0e6cc3; 
+            }
+
+            /* Keeps the navbar at the top of the page when scrolling */
+            ul {    
+                position: fixed; 
+                top: 0;
+                width: 100%; 
+            }
+
+            body {
+                background-image: url('background.jpg');
+                background-repeat: no-repeat; /* when the image has a size smaller than the background, it will be repeat. This stops that from happening */
+                background-size: cover;
+            }
+        </style>
+         <title>Learning Tips</title>
+    </head>
+    
+    <body>
+        <ul>
+            <li><a class="active" href="home.html">Home</a></li> 
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="game.html">Game</a></li>
+            <li><a href="info.html">Info</a></li>
+        </ul>
+
+          
+          <header>
+            <hr><hr><hr>
+            <h1>Learning Tips</h1>
+        </header>
+        
+        <h2>Your Study Environment</h2>
+        
+        <p>Creating a productive area of study allows you to get the most out of your study time. 
+            Effective time management, organized books, a strong motivation and the ability to take notes, are all key tools required for an effective study 
+            environment. <br>
+            What's right for you might not work for someone else. The ideal study environment would be in a designated area with a table and no distractions.
+            This means turning off your phone for the duration of your study to get rid of any distractions. Poor lighting is a big cause of eyestrain and 
+            headaches, so the direction and intensitiy of the light in the room are important factors. Your working area should be free of any clutter so 
+            materials can be placed in an organized manner which keeps everything in a place it's easy to find.
+        </p>
+
+        <h3>Studying Checklist</h3>
+
+            <p>1. Are you in a quiet area?</p>
+            <form>
+              <input type="radio" id="Yes" name="quiet_area" value="Yes">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="No" name="quiet_area" value="No">
+              <label for="no">No</label><br>
+            </form> 
+
+            <p>2. Is there good lighting in the room?</p>
+
+            <form>
+              <input type="radio" id="Yes" name="good_lighting" value="Yes">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="No" name="good_lighting" value="No">
+              <label for="no">No</label><br>
+            </form> 
+
+            <p>3. Is you study area free of clutter?</p>
+
+            <form>
+              <input type="radio" id="Yes" name="good_lighting" value="Yes">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="No" name="good_lighting" value="No">
+              <label for="no">No</label><br>
+            </form> 
+
+            <p>4. Are your materials laid out in an organized manner?</p>
+
+            <form>
+              <input type="radio" id="Yes" name="good_lighting" value="Yes">
+              <label for="yes">Yes</label><br>
+              <input type="radio" id="No" name="good_lighting" value="No">
+              <label for="no">No</label><br>
+            </form> 
+
+            <p>5. Is your phone out of the way?</p>
+
+            <form>
+              <input type="radio" id="Yes1" name="phone_access" value="Yes1">
+              <label for="yes1">Yes, it is switched off</label><br>
+              <input type="radio" id="Yes2" name="phone_access" value="Yes2">
+              <label for="yes2">Yes, it is put away</label><br>
+              <input type="radio" id="No" name="phone_access" value="No"> 
+              <label for="no">No</label><br>
+            </form> 
+        
+            <p>Please put in the time you start studying</p>
+            <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+                Time: <input type="text" name="time">
+                <input type="submit" value="Submit">
+              </form>
+                
+
+    </body>
+</html>
